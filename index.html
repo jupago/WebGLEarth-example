@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="users.js"></script>
+    <!-- <script type="text/javascript" src="setGeocode.js"></script> -->
+    <script type="text/javascript" src="earth.js"></script>
+    <style>
+      html, body{padding: 0; margin: 0; background-color: ;}
+      #earth_div{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 20vw;
+        position: absolute;
+        width: 60vw;
+        height: 500px;
+        /*background-size: cover;
+        background-image: url(http://www.gsmlondon.ac.uk/global-oil-map/assets/img/bg-stars-large.png);*/
+
+      }
+      .cesium-credit-textContainer{
+        opacity: 0;
+      }
+      .earth_wrapper {
+        background: -moz-linear-gradient(top, rgba(21,71,109,1) 0%, rgba(5,18,28,0) 74%, rgba(0,0,0,0) 99%);
+        background: -webkit-linear-gradient(top, rgba(21,71,109,1) 0%,rgba(5,18,28,0) 74%,rgba(0,0,0,0) 99%);
+        background: linear-gradient(to bottom, rgba(21,71,109,1) 0%,rgba(5,18,28,0) 74%,rgba(0,0,0,0) 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15476d', endColorstr='#00000000',GradientType=0 );
+      }
+    </style>
+    <title></title>
+  </head>
+  <body onload="initialize(event, [35, 0])">
+    <div class="earth_wrapper">
+    <input id="search" type="text" name="" value=""  />
+    <button type="button" name="button" onclick="updateMarker()">Submit</button>
+    <button type="button" name="button" onclick="setCenterView()">Re-center</button>
+    <button type="button" name="button" onclick="addMarkers()">Add</button>
+    <button type="button" name="button" onclick="removeMarkers()">Remove</button>
+    <button type="button" name="button" onclick="cancelAnimationFrame(animation)">Stop</button>
+    <button type="button" name="button" onclick="startAnimation()">Start</button>
+    <button type="button" name="button" onclick="panToLocation([53,0])">england</button>
+    <div>
+    <div id="earth_div"></div>
+
+  </body>
+</html>
